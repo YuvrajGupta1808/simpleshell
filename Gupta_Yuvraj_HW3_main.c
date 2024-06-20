@@ -7,7 +7,9 @@
 *
 * File:: Gupta_Yuvraj_HW3_main.c
 *
-* Description:: 
+* Description:: Implements a custom shell that reads user input,
+* parses commands with pipes, and executes them by forking child 
+* processes. Manages input/output redirection and process handling.
 *
 **************************************************************/
 
@@ -61,7 +63,7 @@ void shell_loop(char *prompt) {
             }
         }
 
-        // Remove the newline character at the end of the input
+        // Remove the newline at the end of the input
         line_size = strlen(input);
         if (line_size > 0 && input[line_size - 1] == '\n') {
             input[line_size - 1] = '\0';
